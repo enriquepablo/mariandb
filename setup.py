@@ -47,6 +47,8 @@ setup(
     zip_safe=False,
     install_requires=[
         'Django==1.9.2',
+        'django-bootstrap3==6.2.2',
+        'django-admin-bootstrapped>=2.5.7',
     ],
     extras_require = {
         'PG': ['psycopg2 == 2.5.4',],
