@@ -187,3 +187,33 @@ class Patient(models.Model):
     sleep_treatment = models.BooleanField(
                               verbose_name=_('Sleep Treatment'))
 
+
+class BiochemAnalysis(models.Model):
+
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE,
+                     verbose_name=_('Patient'),
+                     related_name='biochem_analysis')
+
+    date = models.DateField(verbose_name=_('Date of analysis'))
+
+    hdl = models.PositiveSmallIntegerField(
+                          verbose_name=_('Cholesterol HDL'))
+
+    ldl = models.PositiveSmallIntegerField(
+                          verbose_name=_('Cholesterol LDL'))
+
+    cholesterol_total = models.PositiveSmallIntegerField(
+                          verbose_name=_('Cholesterol Total'))
+
+    tg_level = models.PositiveSmallIntegerField(
+                          verbose_name=_('Triglycerids Level'))
+
+    sugar_level = models.PositiveSmallIntegerField(
+                          verbose_name=_('Sugar Level'))
+
+    uric_acid = models.FloatField(verbose_name=_('Uric Acid'))
+
+    iron = models.FloatField(verbose_name=_('Iron'))
+
+    calcium = models.FloatField(verbose_name=_('Calcium'))
+
