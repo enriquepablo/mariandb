@@ -22,6 +22,8 @@ DATABASES = {
     }
 }
 
+SECRET_KEY = ''
+
 TIME_ZONE = 'Europe/Madrid'
 
 EMAIL_HOST = 'localhost'
