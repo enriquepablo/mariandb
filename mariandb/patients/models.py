@@ -86,7 +86,7 @@ class Patient(models.Model):
     n_meals = models.PositiveSmallIntegerField(
                           verbose_name=_('Number of daily meals'))
 
-    snacks = models.BooleanField(vebose_name=_('Has snacks between meals'))
+    snacks = models.BooleanField(verbose_name=_('Has snacks between meals'))
 
     eats_where = models.CharField(max_length=25,
                 verbose_name=_('Where has meals'), choices=WHERE_CHOICES)
@@ -94,7 +94,7 @@ class Patient(models.Model):
     eats_with = models.CharField(max_length=25,
                 verbose_name=_('With whom has meals'), choices=WITH_CHOICES)
 
-    eats_fast = models.BooleanChoice(verbose_name=_('Eats Fast'))
+    eats_fast = models.BooleanField(verbose_name=_('Eats Fast'))
 
     who_buys = models.CharField(max_length=25,
                 verbose_name=_('Who buys food'), choices=WHO_CHOICES)
@@ -108,7 +108,7 @@ class Patient(models.Model):
     aversions = models.CharField(max_length=255,
                                 verbose_name=_('Aversions'))
 
-    overweight =  models.BooleanChoice(verbose_name=_('Overweight'))
+    overweight =  models.BooleanField(verbose_name=_('Overweight'))
 
     icm =  models.FloatField(verbose_name=_('ICM'))
 
@@ -118,15 +118,15 @@ class Patient(models.Model):
     drinks = models.CharField(max_length=255,
                                 verbose_name=_('Alcohol consumption'))
 
-    sedentarism =  models.BooleanChoice(verbose_name=_('Sedentarian'))
+    sedentarism =  models.BooleanField(verbose_name=_('Sedentarian'))
 
-    hta =  models.BooleanChoice(verbose_name=_('HTA'))
+    hta =  models.BooleanField(verbose_name=_('HTA'))
 
-    hta_treatment = models.BooleanChoice(verbose_name=_('HTA Treatement'))
+    hta_treatment = models.BooleanField(verbose_name=_('HTA Treatement'))
 
-    cholesterol = models.BooleanChoice(verbose_name=_('Cholesterol'))
+    cholesterol = models.BooleanField(verbose_name=_('Cholesterol'))
 
-    cholesterol_treatment = models.BooleanChoice(
+    cholesterol_treatment = models.BooleanField(
                               verbose_name=_('Cholesterol Treatment'))
 
     hdl = models.PositiveSmallIntegerField(
@@ -138,17 +138,17 @@ class Patient(models.Model):
     cholesterol_total = models.PositiveSmallIntegerField(
                           verbose_name=_('Cholesterol Total'))
 
-    triglycerids = models.BooleanChoice(verbose_name=_('Triglycerids'))
+    triglycerids = models.BooleanField(verbose_name=_('Triglycerids'))
 
-    tg_treatment = models.BooleanChoice(
+    tg_treatment = models.BooleanField(
                               verbose_name=_('Triglycerids Treatment'))
 
     tg_level = models.PositiveSmallIntegerField(
                           verbose_name=_('Triglycerids Level'))
 
-    sugar = models.BooleanChoice(verbose_name=_('Sugar'))
+    sugar = models.BooleanField(verbose_name=_('Sugar'))
 
-    sugar_treatment = models.BooleanChoice(
+    sugar_treatment = models.BooleanField(
                               verbose_name=_('Sugar Treatment'))
 
     sugar_level = models.PositiveSmallIntegerField(
@@ -157,25 +157,25 @@ class Patient(models.Model):
     surgeries = models.CharField(max_length=255,
                                 verbose_name=_('History of surgeries'))
 
-    anxiety = models.BooleanChoice(verbose_name=_('Anxiety'))
+    anxiety = models.BooleanField(verbose_name=_('Anxiety'))
 
-    anxiety_treatment = models.BooleanChoice(
+    anxiety_treatment = models.BooleanField(
                               verbose_name=_('Anxiety Treatment'))
 
-    depression = models.BooleanChoice(verbose_name=_('Depression'))
+    depression = models.BooleanField(verbose_name=_('Depression'))
 
-    depression_treatment = models.BooleanChoice(
+    depression_treatment = models.BooleanField(
                               verbose_name=_('Depression Treatment'))
 
-    constipation = models.BooleanChoice(verbose_name=_('Constipation'))
+    constipation = models.BooleanField(verbose_name=_('Constipation'))
 
-    constipation_treatment = models.BooleanChoice(
+    constipation_treatment = models.BooleanField(
                               verbose_name=_('Constipation Treatment'))
 
     thyroidism = models.CharField(max_length=25,
                 verbose_name=_('Thyroidism'), choices=THYROID_CHOICES)
 
-    thyroid_treatment = models.BooleanChoice(
+    thyroid_treatment = models.BooleanField(
                               verbose_name=_('Thyroid Treatment'))
 
     food_alergies = models.CharField(max_length=255,
@@ -184,6 +184,6 @@ class Patient(models.Model):
     sleep_habits = models.CharField(max_length=255,
                                 verbose_name=_('Sleep Habits'))
 
-    sleep_treatment = models.BooleanChoice(
+    sleep_treatment = models.BooleanField(
                               verbose_name=_('Sleep Treatment'))
 
