@@ -217,3 +217,23 @@ class BiochemAnalysis(models.Model):
 
     calcium = models.FloatField(verbose_name=_('Calcium'))
 
+
+class BloodPressure(models.Model):
+
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE,
+                     verbose_name=_('Patient'),
+                     related_name='blood_pressure_report')
+
+    date = models.DateField(verbose_name=_('Date of report'))
+
+    left_arm_high = models.FloatField(verbose_name=_('Left Arm High'))
+    left_arm_low = models.FloatField(verbose_name=_('Left Arm Low'))
+    right_arm_high = models.FloatField(verbose_name=_('Right Arm High'))
+    right_arm_low = models.FloatField(verbose_name=_('Right Arm Low'))
+    mean_high = models.FloatField(verbose_name=_('Mean High'))
+    mean_low = models.FloatField(verbose_name=_('Mean Low'))
+
+    heart_rate = models.PositiveSmallIntegerField(
+                          verbose_name=_('Heart Rate'))
+
+    treatment = models.BooleanField(verbose_name=_('In Treatment'))
