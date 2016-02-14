@@ -19,3 +19,4 @@ build/
 dist/
 lextab.py
 *.sqlite3
+local_settings.py

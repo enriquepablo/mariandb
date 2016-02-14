@@ -1,0 +1,28 @@
+import os
+
+
+BASEDIR = os.path.abspath(os.path.dirname(__file__))
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+ADMINS = (
+ ('Enrique Perez', 'enriquepablo@gmail.com'),
+)
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'mariandb',
+        'USER': 'mariandb',
+        'PASSWORD': '',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        
+    }
+}
+
+TIME_ZONE = 'Europe/Madrid'
+
+EMAIL_HOST = 'localhost'
+EMAIL_PORT = 25
