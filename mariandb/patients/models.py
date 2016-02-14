@@ -2,6 +2,9 @@ from django.db import models
 from django.utils.translation import ugettext as _
 
 
+
+# XXX placeholders, defaults
+
 class Patient(models.Model):
     MALE = 'M'
     FEMALE = 'F'
@@ -237,3 +240,45 @@ class BloodPressure(models.Model):
                           verbose_name=_('Heart Rate'))
 
     treatment = models.BooleanField(verbose_name=_('In Treatment'))
+
+
+class ConsultationData(models.Model):
+
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE,
+                     verbose_name=_('Patient'),
+                     related_name='consultation')
+
+    date = models.DateField(verbose_name=_('Date of consultation'))
+
+    start_date = models.DateField(verbose_name=_('Start Date'))
+
+    end_date = models.DateField(verbose_name=_('End Date'))
+
+    visit_number = models.PositiveSmallIntegerField(
+                          verbose_name=_('Visit Number'))
+
+    lost_weight = models.FloatField(verbose_name=_('Lost Weight'))
+    imc_reduction = models.FloatField(verbose_name=_('I.M.C. reduction'))
+    pc_reduction = models.FloatField(verbose_name=_('P.C. reduction'))
+
+
+class AntropometricMeasurement(models.Model):
+
+    patient = models.ForeignKey(Patient, on_delete=models.CASCADE,
+                     verbose_name=_('Patient'),
+                     related_name='measurement')
+
+    date = models.DateField(verbose_name=_('Date of measurement'))
+
+    weight = models.FloatField(verbose_name=_('Weight'))
+    imc = models.FloatField(verbose_name=_('I.M.C.'))
+    chest = models.FloatField(verbose_name=_('Perim. Chest'))
+    min_waist = models.FloatField(verbose_name=_('Perim. Waist Min'))
+    hip = models.FloatField(verbose_name=_('Perim. Hips'))
+    navel = models.FloatField(verbose_name=_('Perim. Navel'))
+    thigh = models.FloatField(verbose_name=_('Perim. Thighs'))
+    lost_weight = models.FloatField(verbose_name=_('Lost weight'))
+    lost_weight_total = models.FloatField(verbose_name=_('Lost weight total'))
+    lost_cm = models.FloatField(verbose_name=_('Lost cm'))
+    lost_cm_total = models.FloatField(verbose_name=_('Lost cm total'))
+

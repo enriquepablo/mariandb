@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.translation import ugettext as _
 
 from .models import Patient, BiochemAnalysis
-from .models import BloodPressure
+from .models import BloodPressure, ConsultationData, AntropometricMeasurement
 
 
 class AnalysisInline(admin.StackedInline):
@@ -21,9 +21,26 @@ class BloodInline(admin.StackedInline):
     min_num = 1
 
 
+class ConsultationInline(admin.StackedInline):
+    model = ConsultationData
+    verbose_name = _('Consultation Data Set')
+    verbose_name_plural = _('Consultation Data Sets')
+    ordering = ('date',)
+    min_num = 1
+
+
+class MeasurementInline(admin.StackedInline):
+    model = AntropometricMeasurement
+    verbose_name = _('Antropometric Measurement')
+    verbose_name_plural = _('Antropometric Measurements')
+    ordering = ('date',)
+    min_num = 1
+
+
 @admin.register(Patient)
 class PatientAdmin(admin.ModelAdmin):
-    inlines = [AnalysisInline, BloodInline]
+    inlines = [AnalysisInline, BloodInline, ConsultationInline,
+                MeasurementInline]
     list_display = ('name', 'surname', 'phone', 'birthday')
     list_filter = ('sex', 'birthday', 'status', 'children',
                 'familial_overweight', 'flatmates', 'n_meals')
@@ -42,5 +59,19 @@ class AnalysisAdmin(admin.ModelAdmin):
 class BloodAdmin(admin.ModelAdmin):
     list_display = ('patient', 'date', 'mean_high', 'mean_low',
                     'heart_rate', 'treatment')
+    list_filter = ('patient',)
+
+
+@admin.register(ConsultationData)
+class ConsultationAdmin(admin.ModelAdmin):
+    list_display = ('patient', 'start_date', 'end_date', 'visit_number',
+                    'lost_weight')
+    list_filter = ('patient',)
+
+
+@admin.register(AntropometricMeasurement)
+class MeasurementAdmin(admin.ModelAdmin):
+    list_display = ('patient', 'date', 'weight', 'lost_weight',
+                    'lost_weight_total')
     list_filter = ('patient',)
 
