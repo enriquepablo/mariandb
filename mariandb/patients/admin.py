@@ -10,7 +10,7 @@ class AnalysisInline(admin.StackedInline):
     verbose_name = _('Blood Presure Report')
     verbose_name_plural = _('Blood Presure Reports')
     ordering = ('date',)
-    min_num = 1
+    extra = 1
 
 
 class BloodInline(admin.StackedInline):
@@ -18,7 +18,7 @@ class BloodInline(admin.StackedInline):
     verbose_name = _('Biochemocal Analysis')
     verbose_name_plural = _('Biochemocal Analysis')
     ordering = ('date',)
-    min_num = 1
+    extra = 1
 
 
 class ConsultationInline(admin.StackedInline):
@@ -26,7 +26,7 @@ class ConsultationInline(admin.StackedInline):
     verbose_name = _('Consultation Data Set')
     verbose_name_plural = _('Consultation Data Sets')
     ordering = ('start_date',)
-    min_num = 1
+    extra = 1
 
 
 class MeasurementInline(admin.StackedInline):
@@ -34,7 +34,7 @@ class MeasurementInline(admin.StackedInline):
     verbose_name = _('Antropometric Measurement')
     verbose_name_plural = _('Antropometric Measurements')
     ordering = ('date',)
-    min_num = 1
+    extra = 1
 
 
 @admin.register(Patient)
