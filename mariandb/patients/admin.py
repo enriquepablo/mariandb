@@ -25,7 +25,7 @@ class ConsultationInline(admin.StackedInline):
     model = ConsultationData
     verbose_name = _('Consultation Data Set')
     verbose_name_plural = _('Consultation Data Sets')
-    ordering = ('date',)
+    ordering = ('start_date',)
     min_num = 1
 
 

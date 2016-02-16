@@ -27,16 +27,16 @@ class Patient(models.Model):
         (LONE, _('Alone')),
         (COUPLE, _('With Couple')),
         (FAMILY, _('With Family')))
-    HOME = 'H'
+    ATHOME = 'H'
     WORK = 'W'
     STREET = 'S'
     FAMILY = 'F'
     OTHER = 'O'
     WHERE_CHOICES = (
-        (HOME, _('Home')),
-        (WORK, _('Work')),
-        (STREET, _('Street')),
-        (FAMILY, _('Family')),
+        (ATHOME, _('At Home')),
+        (WORK, _('At Work')),
+        (STREET, _('In the Street')),
+        (FAMILY, _('In Family Home')),
         (OTHER, _('Other')))
     INCOMPANY = 'I'
     WITH_CHOICES = (
@@ -248,8 +248,6 @@ class ConsultationData(models.Model):
                      verbose_name=_('Patient'),
                      related_name='consultation')
 
-    date = models.DateField(verbose_name=_('Date of consultation'))
-
     start_date = models.DateField(verbose_name=_('Start Date'))
 
     end_date = models.DateField(verbose_name=_('End Date'))
@@ -279,6 +277,6 @@ class AntropometricMeasurement(models.Model):
     thigh = models.FloatField(verbose_name=_('Perim. Thighs'))
     lost_weight = models.FloatField(verbose_name=_('Lost weight'))
     lost_weight_total = models.FloatField(verbose_name=_('Lost weight total'))
-    lost_cm = models.FloatField(verbose_name=_('Lost cm'))
-    lost_cm_total = models.FloatField(verbose_name=_('Lost cm total'))
+    lost_cm = models.FloatField(verbose_name=_('Lost cm (waist)'))
+    lost_cm_total = models.FloatField(verbose_name=_('Lost cm total (waist)'))
 
