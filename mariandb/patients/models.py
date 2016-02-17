@@ -64,130 +64,155 @@ class Patient(models.Model):
     sex = models.CharField(max_length=25, verbose_name=_('Sex'),
                           choices=SEX_CHOICES)
 
-    birthday = models.DateField(verbose_name=_('Birthday'))
+    birthday = models.DateField(verbose_name=_('Birthday'),
+                        null=True, blank=True)
 
     status = models.CharField(max_length=25, verbose_name=_('Marital Status'),
-                          choices=MARITAL_STATUS_CHOICES)
+                          choices=MARITAL_STATUS_CHOICES,
+                        null=True, blank=True)
 
-    phone = models.CharField(max_length=255, verbose_name=_('Phone Number'))
+    phone = models.CharField(max_length=255, verbose_name=_('Phone Number'),
+                        null=True, blank=True)
 
     email = models.EmailField(verbose_name=_('Email'), null=True, blank=True)
 
-    children = models.IntegerField(verbose_name=_('Children'))
+    children = models.IntegerField(verbose_name=_('Children'),
+                        null=True, blank=True)
 
-    occupation = models.CharField(max_length=255, verbose_name=_('Occupation'))
+    occupation = models.CharField(max_length=255, verbose_name=_('Occupation'),
+                        null=True, blank=True)
 
     consultation_reason = models.TextField(null=True, blank=True,
                                      verbose_name=_('Reason for consultation'))
 
-    familial_overweight = models.BooleanField(
+    familial_overweight = models.NullBooleanField(
                                         verbose_name=_('Familial Overweight'))
 
     flatmates = models.CharField(max_length=25, verbose_name=_('Flatmates'),
-                          choices=FLATMATE_CHOICES)
+                          choices=FLATMATE_CHOICES,
+                        null=True, blank=True)
 
     n_meals = models.PositiveSmallIntegerField(
-                          verbose_name=_('Number of daily meals'))
+                          verbose_name=_('Number of daily meals'),
+                        null=True, blank=True)
 
-    snacks = models.BooleanField(verbose_name=_('Has snacks between meals'))
+    snacks = models.NullBooleanField(verbose_name=_('Has snacks between meals'))
 
     eats_where = models.CharField(max_length=25,
-                verbose_name=_('Where has meals'), choices=WHERE_CHOICES)
+                verbose_name=_('Where has meals'), choices=WHERE_CHOICES,
+                        null=True, blank=True)
 
     eats_with = models.CharField(max_length=25,
-                verbose_name=_('With whom has meals'), choices=WITH_CHOICES)
+                verbose_name=_('With whom has meals'), choices=WITH_CHOICES,
+                        null=True, blank=True)
 
-    eats_fast = models.BooleanField(verbose_name=_('Eats Fast'))
+    eats_fast = models.NullBooleanField(verbose_name=_('Eats Fast'))
 
     who_buys = models.CharField(max_length=25,
-                verbose_name=_('Who buys food'), choices=WHO_CHOICES)
+                verbose_name=_('Who buys food'), choices=WHO_CHOICES,
+                        null=True, blank=True)
 
     who_cooks = models.CharField(max_length=25,
-                verbose_name=_('Who cooks food'), choices=WHO_CHOICES)
+                verbose_name=_('Who cooks food'), choices=WHO_CHOICES,
+                        null=True, blank=True)
 
     preferences = models.CharField(max_length=255,
-                                verbose_name=_('Preferences'))
+                                verbose_name=_('Preferences'),
+                        null=True, blank=True)
 
     aversions = models.CharField(max_length=255,
-                                verbose_name=_('Aversions'))
+                                verbose_name=_('Aversions'),
+                        null=True, blank=True)
 
-    overweight =  models.BooleanField(verbose_name=_('Overweight'))
+    overweight =  models.NullBooleanField(verbose_name=_('Overweight'))
 
-    icm =  models.FloatField(verbose_name=_('ICM'))
+    icm =  models.FloatField(verbose_name=_('ICM'),
+                        null=True, blank=True)
 
     smokes = models.PositiveSmallIntegerField(
-                          verbose_name=_('Number of daily cigarettes'))
+                          verbose_name=_('Number of daily cigarettes'),
+                        null=True, blank=True)
 
     drinks = models.CharField(max_length=255,
-                                verbose_name=_('Alcohol consumption'))
+                                verbose_name=_('Alcohol consumption'),
+                        null=True, blank=True)
 
-    sedentarism =  models.BooleanField(verbose_name=_('Sedentarian'))
+    sedentarism =  models.NullBooleanField(verbose_name=_('Sedentarian'))
 
-    hta =  models.BooleanField(verbose_name=_('HTA'))
+    hta =  models.NullBooleanField(verbose_name=_('HTA'))
 
-    hta_treatment = models.BooleanField(verbose_name=_('HTA Treatement'))
+    hta_treatment = models.NullBooleanField(verbose_name=_('HTA Treatement'))
 
-    cholesterol = models.BooleanField(verbose_name=_('Cholesterol'))
+    cholesterol = models.NullBooleanField(verbose_name=_('Cholesterol'))
 
-    cholesterol_treatment = models.BooleanField(
+    cholesterol_treatment = models.NullBooleanField(
                               verbose_name=_('Cholesterol Treatment'))
 
     hdl = models.PositiveSmallIntegerField(
-                          verbose_name=_('Cholesterol HDL'))
+                          verbose_name=_('Cholesterol HDL'),
+                        null=True, blank=True)
 
     ldl = models.PositiveSmallIntegerField(
-                          verbose_name=_('Cholesterol LDL'))
+                          verbose_name=_('Cholesterol LDL'),
+                        null=True, blank=True)
 
     cholesterol_total = models.PositiveSmallIntegerField(
-                          verbose_name=_('Cholesterol Total'))
+                          verbose_name=_('Cholesterol Total'),
+                        null=True, blank=True)
 
-    triglycerids = models.BooleanField(verbose_name=_('Triglycerids'))
+    triglycerids = models.NullBooleanField(verbose_name=_('Triglycerids'))
 
-    tg_treatment = models.BooleanField(
+    tg_treatment = models.NullBooleanField(
                               verbose_name=_('Triglycerids Treatment'))
 
     tg_level = models.PositiveSmallIntegerField(
-                          verbose_name=_('Triglycerids Level'))
+                          verbose_name=_('Triglycerids Level'),
+                        null=True, blank=True)
 
-    sugar = models.BooleanField(verbose_name=_('Sugar'))
+    sugar = models.NullBooleanField(verbose_name=_('Sugar'))
 
-    sugar_treatment = models.BooleanField(
+    sugar_treatment = models.NullBooleanField(
                               verbose_name=_('Sugar Treatment'))
 
     sugar_level = models.PositiveSmallIntegerField(
-                          verbose_name=_('Sugar Level'))
+                          verbose_name=_('Sugar Level'),
+                        null=True, blank=True)
 
     surgeries = models.CharField(max_length=255,
-                                verbose_name=_('History of surgeries'))
+                                verbose_name=_('History of surgeries'),
+                        null=True, blank=True)
 
-    anxiety = models.BooleanField(verbose_name=_('Anxiety'))
+    anxiety = models.NullBooleanField(verbose_name=_('Anxiety'))
 
-    anxiety_treatment = models.BooleanField(
+    anxiety_treatment = models.NullBooleanField(
                               verbose_name=_('Anxiety Treatment'))
 
-    depression = models.BooleanField(verbose_name=_('Depression'))
+    depression = models.NullBooleanField(verbose_name=_('Depression'))
 
-    depression_treatment = models.BooleanField(
+    depression_treatment = models.NullBooleanField(
                               verbose_name=_('Depression Treatment'))
 
-    constipation = models.BooleanField(verbose_name=_('Constipation'))
+    constipation = models.NullBooleanField(verbose_name=_('Constipation'))
 
-    constipation_treatment = models.BooleanField(
+    constipation_treatment = models.NullBooleanField(
                               verbose_name=_('Constipation Treatment'))
 
     thyroidism = models.CharField(max_length=25,
-                verbose_name=_('Thyroidism'), choices=THYROID_CHOICES)
+                verbose_name=_('Thyroidism'), choices=THYROID_CHOICES,
+                        null=True, blank=True)
 
-    thyroid_treatment = models.BooleanField(
+    thyroid_treatment = models.NullBooleanField(
                               verbose_name=_('Thyroid Treatment'))
 
     food_alergies = models.CharField(max_length=255,
-                                verbose_name=_('Food Alergies'))
+                                verbose_name=_('Food Alergies'),
+                        null=True, blank=True)
 
     sleep_habits = models.CharField(max_length=255,
-                                verbose_name=_('Sleep Habits'))
+                                verbose_name=_('Sleep Habits'),
+                        null=True, blank=True)
 
-    sleep_treatment = models.BooleanField(
+    sleep_treatment = models.NullBooleanField(
                               verbose_name=_('Sleep Treatment'))
 
 
@@ -197,28 +222,37 @@ class BiochemAnalysis(models.Model):
                      verbose_name=_('Patient'),
                      related_name='biochem_analysis')
 
-    date = models.DateField(verbose_name=_('Date of analysis'))
+    date = models.DateField(verbose_name=_('Date of analysis'),
+                        null=True, blank=True)
 
     hdl = models.PositiveSmallIntegerField(
-                          verbose_name=_('Cholesterol HDL'))
+                          verbose_name=_('Cholesterol HDL'),
+                        null=True, blank=True)
 
     ldl = models.PositiveSmallIntegerField(
-                          verbose_name=_('Cholesterol LDL'))
+                          verbose_name=_('Cholesterol LDL'),
+                        null=True, blank=True)
 
     cholesterol_total = models.PositiveSmallIntegerField(
-                          verbose_name=_('Cholesterol Total'))
+                          verbose_name=_('Cholesterol Total'),
+                        null=True, blank=True)
 
     tg_level = models.PositiveSmallIntegerField(
-                          verbose_name=_('Triglycerids Level'))
+                          verbose_name=_('Triglycerids Level'),
+                        null=True, blank=True)
 
     sugar_level = models.PositiveSmallIntegerField(
-                          verbose_name=_('Sugar Level'))
+                          verbose_name=_('Sugar Level'),
+                        null=True, blank=True)
 
-    uric_acid = models.FloatField(verbose_name=_('Uric Acid'))
+    uric_acid = models.FloatField(verbose_name=_('Uric Acid'),
+                        null=True, blank=True)
 
-    iron = models.FloatField(verbose_name=_('Iron'))
+    iron = models.FloatField(verbose_name=_('Iron'),
+                        null=True, blank=True)
 
-    calcium = models.FloatField(verbose_name=_('Calcium'))
+    calcium = models.FloatField(verbose_name=_('Calcium'),
+                        null=True, blank=True)
 
 
 class BloodPressure(models.Model):
@@ -227,19 +261,27 @@ class BloodPressure(models.Model):
                      verbose_name=_('Patient'),
                      related_name='blood_pressure_report')
 
-    date = models.DateField(verbose_name=_('Date of report'))
+    date = models.DateField(verbose_name=_('Date of report'),
+                        null=True, blank=True)
 
-    left_arm_high = models.FloatField(verbose_name=_('Left Arm High'))
-    left_arm_low = models.FloatField(verbose_name=_('Left Arm Low'))
-    right_arm_high = models.FloatField(verbose_name=_('Right Arm High'))
-    right_arm_low = models.FloatField(verbose_name=_('Right Arm Low'))
-    mean_high = models.FloatField(verbose_name=_('Mean High'))
-    mean_low = models.FloatField(verbose_name=_('Mean Low'))
+    left_arm_high = models.FloatField(verbose_name=_('Left Arm High'),
+                        null=True, blank=True)
+    left_arm_low = models.FloatField(verbose_name=_('Left Arm Low'),
+                        null=True, blank=True)
+    right_arm_high = models.FloatField(verbose_name=_('Right Arm High'),
+                        null=True, blank=True)
+    right_arm_low = models.FloatField(verbose_name=_('Right Arm Low'),
+                        null=True, blank=True)
+    mean_high = models.FloatField(verbose_name=_('Mean High'),
+                        null=True, blank=True)
+    mean_low = models.FloatField(verbose_name=_('Mean Low'),
+                        null=True, blank=True)
 
     heart_rate = models.PositiveSmallIntegerField(
-                          verbose_name=_('Heart Rate'))
+                          verbose_name=_('Heart Rate'),
+                        null=True, blank=True)
 
-    treatment = models.BooleanField(verbose_name=_('In Treatment'))
+    treatment = models.NullBooleanField(verbose_name=_('In Treatment'))
 
 
 class ConsultationData(models.Model):
@@ -248,16 +290,22 @@ class ConsultationData(models.Model):
                      verbose_name=_('Patient'),
                      related_name='consultation')
 
-    start_date = models.DateField(verbose_name=_('Start Date'))
+    start_date = models.DateField(verbose_name=_('Start Date'),
+                        null=True, blank=True)
 
-    end_date = models.DateField(verbose_name=_('End Date'))
+    end_date = models.DateField(verbose_name=_('End Date'),
+                        null=True, blank=True)
 
     visit_number = models.PositiveSmallIntegerField(
-                          verbose_name=_('Visit Number'))
+                          verbose_name=_('Visit Number'),
+                        null=True, blank=True)
 
-    lost_weight = models.FloatField(verbose_name=_('Lost Weight'))
-    imc_reduction = models.FloatField(verbose_name=_('I.M.C. reduction'))
-    pc_reduction = models.FloatField(verbose_name=_('P.C. reduction'))
+    lost_weight = models.FloatField(verbose_name=_('Lost Weight'),
+                        null=True, blank=True)
+    imc_reduction = models.FloatField(verbose_name=_('I.M.C. reduction'),
+                        null=True, blank=True)
+    pc_reduction = models.FloatField(verbose_name=_('P.C. reduction'),
+                        null=True, blank=True)
 
 
 class AntropometricMeasurement(models.Model):
@@ -266,17 +314,29 @@ class AntropometricMeasurement(models.Model):
                      verbose_name=_('Patient'),
                      related_name='measurement')
 
-    date = models.DateField(verbose_name=_('Date of measurement'))
+    date = models.DateField(verbose_name=_('Date of measurement'),
+                        null=True, blank=True)
 
-    weight = models.FloatField(verbose_name=_('Weight'))
-    imc = models.FloatField(verbose_name=_('I.M.C.'))
-    chest = models.FloatField(verbose_name=_('Perim. Chest'))
-    min_waist = models.FloatField(verbose_name=_('Perim. Waist Min'))
-    hip = models.FloatField(verbose_name=_('Perim. Hips'))
-    navel = models.FloatField(verbose_name=_('Perim. Navel'))
-    thigh = models.FloatField(verbose_name=_('Perim. Thighs'))
-    lost_weight = models.FloatField(verbose_name=_('Lost weight'))
-    lost_weight_total = models.FloatField(verbose_name=_('Lost weight total'))
-    lost_cm = models.FloatField(verbose_name=_('Lost cm (waist)'))
-    lost_cm_total = models.FloatField(verbose_name=_('Lost cm total (waist)'))
+    weight = models.FloatField(verbose_name=_('Weight'),
+                        null=True, blank=True)
+    imc = models.FloatField(verbose_name=_('I.M.C.'),
+                        null=True, blank=True)
+    chest = models.FloatField(verbose_name=_('Perim. Chest'),
+                        null=True, blank=True)
+    min_waist = models.FloatField(verbose_name=_('Perim. Waist Min'),
+                        null=True, blank=True)
+    hip = models.FloatField(verbose_name=_('Perim. Hips'),
+                        null=True, blank=True)
+    navel = models.FloatField(verbose_name=_('Perim. Navel'),
+                        null=True, blank=True)
+    thigh = models.FloatField(verbose_name=_('Perim. Thighs'),
+                        null=True, blank=True)
+    lost_weight = models.FloatField(verbose_name=_('Lost weight'),
+                        null=True, blank=True)
+    lost_weight_total = models.FloatField(verbose_name=_('Lost weight total'),
+                        null=True, blank=True)
+    lost_cm = models.FloatField(verbose_name=_('Lost cm (waist)'),
+                        null=True, blank=True)
+    lost_cm_total = models.FloatField(verbose_name=_('Lost cm total (waist)'),
+                        null=True, blank=True)
 
