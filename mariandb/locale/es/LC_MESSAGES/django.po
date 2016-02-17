@@ -1,0 +1,462 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-17 17:52+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: patients/admin.py:10
+msgid "Blood Presure Report"
+msgstr "Informes de Presión arterial"
+
+#: patients/admin.py:11
+msgid "Blood Presure Reports"
+msgstr "Informes de Presión arterial"
+
+#: patients/admin.py:18
+#| msgid "Biochemical Analysis"
+msgid "Biochemocal Analysis"
+msgstr "Análisis Bioquímico"
+
+#: patients/admin.py:19
+#| msgid "Biochemical Analysis"
+msgid "Biochemocal Analysis pl."
+msgstr "Análisis Bioquímicos"
+
+#: patients/admin.py:26
+msgid "Consultation Data Set"
+msgstr "Datos de consulta"
+
+#: patients/admin.py:27
+msgid "Consultation Data Sets"
+msgstr "Datos de consultas"
+
+#: patients/admin.py:34
+msgid "Antropometric Measurement"
+msgstr "Datos Antropométricos"
+
+#: patients/admin.py:35
+msgid "Antropometric Measurements"
+msgstr "Informes de Datos Antropométricos"
+
+#: patients/models.py:12
+msgid "Male"
+msgstr "Varón"
+
+#: patients/models.py:13
+msgid "Female"
+msgstr "Hembra"
+
+#: patients/models.py:19
+msgid "Married"
+msgstr "Casado/a"
+
+#: patients/models.py:20
+msgid "Single"
+msgstr "Soltero/a"
+
+#: patients/models.py:21
+msgid "Widowed"
+msgstr "Viudo/a"
+
+#: patients/models.py:22
+msgid "Divorced"
+msgstr "Separado/a"
+
+#: patients/models.py:27 patients/models.py:43
+msgid "Alone"
+msgstr "Solo/a"
+
+#: patients/models.py:28
+msgid "With Couple"
+msgstr "Con Pareja"
+
+#: patients/models.py:29
+msgid "With Family"
+msgstr "Con Familia"
+
+#: patients/models.py:36
+msgid "At Home"
+msgstr "En Casa"
+
+#: patients/models.py:37
+msgid "At Work"
+msgstr "En El Trabajo"
+
+#: patients/models.py:38
+msgid "In the Street"
+msgstr "En La Calle"
+
+#: patients/models.py:39
+msgid "In Family Home"
+msgstr "En Casa De Un Familiar"
+
+#: patients/models.py:40 patients/models.py:48
+msgid "Other"
+msgstr "Otro"
+
+#: patients/models.py:44
+msgid "In Company"
+msgstr "En Compañía"
+
+#: patients/models.py:47 patients/models.py:222 patients/models.py:261
+#: patients/models.py:290 patients/models.py:314
+msgid "Patient"
+msgstr "El Propio Paciente"
+
+#: patients/models.py:54
+msgid "Hipothyroidims"
+msgstr "Hipotiroidismo"
+
+#: patients/models.py:55
+msgid "Hyperthyroidims"
+msgstr "Hipertiroidismo"
+
+#: patients/models.py:56
+msgid "Hipo or Hyper"
+msgstr "Tiroidismo (Hipo ó Hiper)"
+
+#: patients/models.py:57
+msgid "None"
+msgstr "Nada"
+
+#: patients/models.py:60
+msgid "First Name"
+msgstr "Nombre"
+
+#: patients/models.py:62
+msgid "Last Name"
+msgstr "Apellidos"
+
+#: patients/models.py:64
+msgid "Sex"
+msgstr "Sexo"
+
+#: patients/models.py:67
+msgid "Birthday"
+msgstr "Fecha Nacimiento"
+
+#: patients/models.py:70
+msgid "Marital Status"
+msgstr "Estado Civil"
+
+#: patients/models.py:74
+msgid "Phone Number"
+msgstr "Teléfono"
+
+#: patients/models.py:77
+msgid "Email"
+msgstr "Email"
+
+#: patients/models.py:79
+msgid "Children"
+msgstr "Nº De Hijos"
+
+#: patients/models.py:82
+msgid "Occupation"
+msgstr "Ocupación"
+
+#: patients/models.py:86
+msgid "Reason for consultation"
+msgstr "Motivo De La Consulta"
+
+#: patients/models.py:89
+msgid "Familial Overweight"
+msgstr "Sobrepeso Familiar"
+
+#: patients/models.py:91
+msgid "Flatmates"
+msgstr "Con Quien Vive"
+
+#: patients/models.py:96
+msgid "Number of daily meals"
+msgstr "Nº Comidas al Día"
+
+#: patients/models.py:99
+msgid "Has snacks between meals"
+msgstr "Picotea Entre Horas"
+
+#: patients/models.py:102
+msgid "Where has meals"
+msgstr "Dónde Come"
+
+#: patients/models.py:106
+msgid "With whom has meals"
+msgstr "Con Quien Come"
+
+#: patients/models.py:109
+msgid "Eats Fast"
+msgstr "Come Rápido"
+
+#: patients/models.py:112
+msgid "Who buys food"
+msgstr "Quien Hace La Compra"
+
+#: patients/models.py:116
+msgid "Who cooks food"
+msgstr "Quien Cocina"
+
+#: patients/models.py:120
+msgid "Preferences"
+msgstr "Preferencias"
+
+#: patients/models.py:124
+msgid "Aversions"
+msgstr "Aversiones"
+
+#: patients/models.py:127
+msgid "Overweight"
+msgstr "Sobrepeso"
+
+#: patients/models.py:129
+msgid "ICM"
+msgstr "I.M.C."
+
+#: patients/models.py:133
+msgid "Number of daily cigarettes"
+msgstr "Nº Cigarrillos Diarios"
+
+#: patients/models.py:137
+msgid "Alcohol consumption"
+msgstr "Consumo de Alcohol"
+
+#: patients/models.py:140
+msgid "Sedentarian"
+msgstr "Sedentarismo"
+
+#: patients/models.py:142
+msgid "HTA"
+msgstr "H.T.A."
+
+#: patients/models.py:144
+msgid "HTA Treatement"
+msgstr "En Tratamiento H.T.A."
+
+#: patients/models.py:146
+msgid "Cholesterol"
+msgstr "Colesterol"
+
+#: patients/models.py:149
+msgid "Cholesterol Treatment"
+msgstr "En Tratamiento Colesterol"
+
+#: patients/models.py:152 patients/models.py:229
+msgid "Cholesterol HDL"
+msgstr "Nivel H.D.L."
+
+#: patients/models.py:156 patients/models.py:233
+msgid "Cholesterol LDL"
+msgstr "Nivel L.D.L."
+
+#: patients/models.py:160 patients/models.py:237
+msgid "Cholesterol Total"
+msgstr "Nivel Colesterol Total"
+
+#: patients/models.py:163
+msgid "Triglycerids"
+msgstr "Triglicéridos"
+
+#: patients/models.py:166
+msgid "Triglycerids Treatment"
+msgstr "En Tratamiento Triglicéridos"
+
+#: patients/models.py:169 patients/models.py:241
+msgid "Triglycerids Level"
+msgstr "Nivel Triglicéridos"
+
+#: patients/models.py:172
+msgid "Sugar"
+msgstr "Azúcar"
+
+#: patients/models.py:175
+msgid "Sugar Treatment"
+msgstr "En Tratamiento Azúcar"
+
+#: patients/models.py:178 patients/models.py:245
+msgid "Sugar Level"
+msgstr "Nivel Azúcar"
+
+#: patients/models.py:182
+msgid "History of surgeries"
+msgstr "Operaciones"
+
+#: patients/models.py:185
+msgid "Anxiety"
+msgstr "Ansiedad"
+
+#: patients/models.py:188
+msgid "Anxiety Treatment"
+msgstr "En Tratamiento Ansiedad"
+
+#: patients/models.py:190
+msgid "Depression"
+msgstr "Depresión"
+
+#: patients/models.py:193
+msgid "Depression Treatment"
+msgstr "En Tratamiento Depresión"
+
+#: patients/models.py:195
+msgid "Constipation"
+msgstr "Estreñimiento"
+
+#: patients/models.py:198
+msgid "Constipation Treatment"
+msgstr "En Tratamiento Estreñimiento"
+
+#: patients/models.py:201
+msgid "Thyroidism"
+msgstr "Tiroidismo"
+
+#: patients/models.py:205
+msgid "Thyroid Treatment"
+msgstr "En Tratamiento Tiroidismo"
+
+#: patients/models.py:208
+msgid "Food Alergies"
+msgstr "Alergias Alimentarias"
+
+#: patients/models.py:212
+msgid "Sleep Habits"
+msgstr "Hábitos de Sueño"
+
+#: patients/models.py:216
+msgid "Sleep Treatment"
+msgstr "En Tratamiento Insomnio"
+
+#: patients/models.py:225
+msgid "Date of analysis"
+msgstr "Fecha del Análisis"
+
+#: patients/models.py:248
+msgid "Uric Acid"
+msgstr "Ácido Úrico"
+
+#: patients/models.py:251
+msgid "Iron"
+msgstr "Hierro"
+
+#: patients/models.py:254
+msgid "Calcium"
+msgstr "Calcio"
+
+#: patients/models.py:264
+msgid "Date of report"
+msgstr "Fecha del Informe"
+
+#: patients/models.py:267
+msgid "Left Arm High"
+msgstr "Brazo Izquierdo Alta"
+
+#: patients/models.py:269
+msgid "Left Arm Low"
+msgstr "Brazo Izquierdo Baja"
+
+#: patients/models.py:271
+msgid "Right Arm High"
+msgstr "Brazo Derecho Alta"
+
+#: patients/models.py:273
+msgid "Right Arm Low"
+msgstr "Brazo Derecho Baja"
+
+#: patients/models.py:275
+msgid "Mean High"
+msgstr "Media Alta"
+
+#: patients/models.py:277
+msgid "Mean Low"
+msgstr "Media Baja"
+
+#: patients/models.py:281
+msgid "Heart Rate"
+msgstr "Nº Pulsaciones por Minuto"
+
+#: patients/models.py:284
+msgid "In Treatment"
+msgstr "En Tratamiento Tensión Arterial"
+
+#: patients/models.py:293
+msgid "Start Date"
+msgstr "Fecha de Inicio"
+
+#: patients/models.py:296
+msgid "End Date"
+msgstr "Fecha de Fin"
+
+#: patients/models.py:300
+msgid "Visit Number"
+msgstr "Nº de Visitas"
+
+#: patients/models.py:303
+msgid "Lost Weight"
+msgstr "Peso Perdido"
+
+#: patients/models.py:305
+msgid "I.M.C. reduction"
+msgstr "Disminución I.M.C."
+
+#: patients/models.py:307
+msgid "P.C. reduction"
+msgstr "Disminición P.C."
+
+#: patients/models.py:317
+msgid "Date of measurement"
+msgstr "Fecha de Medida"
+
+#: patients/models.py:320
+msgid "Weight"
+msgstr "Peso"
+
+#: patients/models.py:322
+msgid "I.M.C."
+msgstr "I.M.C."
+
+#: patients/models.py:324
+msgid "Perim. Chest"
+msgstr "Perímetro Pecho"
+
+#: patients/models.py:326
+msgid "Perim. Waist Min"
+msgstr "Perímetro Cintura Mínima"
+
+#: patients/models.py:328
+msgid "Perim. Hips"
+msgstr "Perímetro Caderas"
+
+#: patients/models.py:330
+msgid "Perim. Navel"
+msgstr "Perímetro Nivel Ombligo"
+
+#: patients/models.py:332
+msgid "Perim. Thighs"
+msgstr "Perímetro Muslos"
+
+#: patients/models.py:334
+msgid "Lost weight"
+msgstr "Peso Perdido"
+
+#: patients/models.py:336
+msgid "Lost weight total"
+msgstr "Peso Perdido Total"
+
+#: patients/models.py:338
+msgid "Lost cm (waist)"
+msgstr "Cm Perdidos (Cintura)"
+
+#: patients/models.py:340
+msgid "Lost cm total (waist)"
+msgstr "Cm Perdidos Total (Cintura)"

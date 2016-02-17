@@ -16,7 +16,7 @@ class AnalysisInline(admin.StackedInline):
 class BloodInline(admin.StackedInline):
     model = BiochemAnalysis
     verbose_name = _('Biochemocal Analysis')
-    verbose_name_plural = _('Biochemocal Analysis')
+    verbose_name_plural = _('Biochemocal Analysis pl.')
     ordering = ('date',)
     extra = 1
 
